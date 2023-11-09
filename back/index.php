@@ -1,3 +1,3 @@
 <?php
 
-echo json_encode('ok ok');
+echo json_encode($_POST);

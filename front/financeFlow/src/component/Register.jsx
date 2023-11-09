@@ -9,7 +9,6 @@ function Register() {
 
   useEffect(() => {
     if (authenticated) {
-
       //todo Rediriger l'utilisateur après authentification.
     }
   }, [authenticated]);
@@ -22,23 +21,24 @@ function Register() {
     try {
       // todo: changer fetch par Axios
       const response = await fetch('../../../back/index.php', {
-
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password , repass}),
+        body: JSON.stringify({ email, password, repass }),
       });
 
       //   method: 'POST',
       //   body: formData,
       // });
 
-      console.log({ email, password , repass});
+      console.log({ email, password, repass });
 
       if (response.ok) {
         const data = await response.json();
         if (data.success) {
+          // todo: ajout de validation des inputs & verification de l'existance de l'email dans la base de données coté back
+
           setAuthenticated(true);
           setMessage('Authentification réussie !');
         } else {
@@ -47,7 +47,7 @@ function Register() {
           );
         }
       } else {
-        setMessage('Erreur de connexion au serveur.');
+        setMessage('Erreur de connexion au serveur HHH.');
       }
     } catch (error) {
       console.error(error);
