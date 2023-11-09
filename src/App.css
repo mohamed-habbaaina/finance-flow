@@ -1,0 +1,74 @@
+@import './CssComponents/BudgetCard.css';
+
+
+
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 420px;
+  height: 870px;
+  background-color: rgb(190, 186, 186);
+  border-radius: 40px;
+}
+.frame{
+  margin:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 410px;
+  height: 860px;
+  background-color: rgb(8, 8, 8);
+  border-radius: 40px;
+}
+.screen{
+  border-radius: 40px;
+  width: 390px;
+  height: 844px;
+  
+  background: #c2e59c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.device{
+  margin: 0.3rem 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color:black;
+  font-size: 0.9rem;
+}
+
+.face{
+  margin-right: 1rem;
+  margin-top: 0.9rem;
+  width: 7rem;
+  height: 2rem;
+  background-color: black;
+  border-radius: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.eyes{
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.5rem;
+  height: 10px;
+  background-color:rgba(27, 113, 153, 0.534);
+  border-radius: 50%;
+  
+}
+
+.material-symbols-rounded, 
+.material-symbols-rounded, 
+.material-symbols-rounded {
+  font-size: 1.2rem;
+}
+
