@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer{
+
+
+    .params{@apply
+        w-full
+        h-12
+        p-4
+        flex
+        flex-row
+        items-center
+        justify-between
+        rounded-3xl
+
+        
+    }
+}

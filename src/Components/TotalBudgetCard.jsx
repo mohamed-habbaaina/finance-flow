@@ -12,9 +12,8 @@ export default function TotalBudgetCard(props) {
         return null
     }
   return (
-    <div>
-        <BudgetCard amount={amount} name ="Total" max={max} hideButtons />
-      
+    <div className='sticky top-0 left-0 right-0 z-10 w-full h-20  bg-[#cbd3dfd2]  rounded-xl  drop-shadow-2xl'>
+        <BudgetCard amount={amount} name ="Total" max={max} hideButtons hidetrash/>
     </div>
   )
 }

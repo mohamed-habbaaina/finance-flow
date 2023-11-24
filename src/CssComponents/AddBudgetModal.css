@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer{
+    .AddBudgetContent{@apply
+      w-full
+      h-auto
+      bg-[#A4BECB]
+      rounded-md
+      
+    }
+
+    .formAddBudget{@apply
+        flex
+        flex-col
+        p-4
+        space-y-10
+        text-xl
+
+        
+
+    }
+
+    .formAddBudget input{@apply
+        w-full
+        h-10
+        rounded-xl
+    }
+
+
+    .AddBudgetButton {
+        @apply !bg-red-600 !text-cyan-300
+    }
+}
+

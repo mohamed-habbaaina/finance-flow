@@ -1,14 +1,20 @@
-import { useBudgets } from "../Context/BudgetsContext"
+import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "../Context/BudgetsContext"
 export default function ViewExpensesModal() {
   
-  const [getBudgetExpense,]
+  const [getBudgetExpense,budgets,deleteBudget,deleteExpense] = useBudgets()
   
+  const budget = UNCATEGORIZED_BUDGET_ID === budgets.iD?{name: "Uncategorized",id:UNCATEGORIZED_BUDGET_ID}:budgets.find(b => b.id === budgets.id)
   return (
     <div>
 
         <form action="" onSubmit={handleSubmit}>
             <header>
-              <span>New Budget</span>
+              <span>Expenses - {budget.name}</span>
+              {budget.id != UNCATEGORIZED_BUDGET_ID &&(
+                  <button onClick={() => deleteBudget(budget
+                    )}>Delete</button>
+
+              )}
             
             </header>
 

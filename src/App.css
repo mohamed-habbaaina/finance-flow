@@ -1,4 +1,26 @@
 @import './CssComponents/BudgetCard.css';
+@import './CssComponents/AddBudgetModal.css';
+@import './CssComponents/NaveBare.css';
+@import './CssComponents/Params.css';
+@import './CssComponents/TotalBudgetCard.css';
+@import './CssComponents/UncategorizedBudgetCard.css';
+@import './CssComponents/ViewExpenseModal.css';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer{
+
+
+    .screen{@apply
+        bg-slate-50
+
+        
+    }
+}
 
 
 
@@ -20,16 +42,20 @@ section{
   height: 860px;
   background-color: rgb(8, 8, 8);
   border-radius: 40px;
+  overflow: hidden;
 }
 .screen{
   border-radius: 40px;
   width: 390px;
   height: 844px;
+  background-color: #5eb6dfb9;
   
-  background: #c2e59c;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  @apply flex flex-col overflow-hidden;
+}
 
+.screen article {
+  max-height: calc(100vh - 100px - 48px) !important;
+  overflow: auto;
 }
 
 .device{

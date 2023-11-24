@@ -10,7 +10,7 @@ export default function UncategorizedBudgetCard(props) {
         return null
     }
   return (
-    <div>
+    <div className=''>
         <BudgetCard amount={amount} name ="Uncategorized"/>
       
     </div>

@@ -1,10 +1,42 @@
 
-.category{
-    background-color: rgba(255, 0, 0, 0.267);
-}
-
-.grayBlur{
-    background-color:var(--blur);
 
 
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer{
+
+
+    .category{@apply
+        bg-[#d3a1729f]
+        rounded-xl
+        p-2
+        drop-shadow-2xl
+        
+    }
+
+
+
+    .grayBlur{@apply
+        bg-[#72b4d39f]
+        rounded-xl
+        p-2
+        drop-shadow-2xl
+        
+    }
+
+
+    .Total{@apply
+        bg-[#e0e9ec7c]
+        rounded-xl
+        p-2
+        text-xl
+        text-black
+    }
 }

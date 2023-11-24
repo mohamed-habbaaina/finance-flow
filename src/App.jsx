@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
-import BudgetCard from './Components/BudgetCard';
 import AddBudgetModal from './Components/AddBudgetModal';
 import AddExpenseModal from './Components/AddExpenseModal';
-import { useBudgets } from './Context/BudgetsContext';
+import { Routes,Route } from 'react-router-dom';
+import Menu from './Components/Menu';
+import Profile from './Components/Profile';
+import Summary from './Components/Summary';
+import Home from './Components/Home';
 import './App.css';
-import UncategorizedBudgetCard from './Components/UncategorizedBudgetCard';
-import TotalBudgetCard from './Components/TotalBudgetCard';
+import NaveBare from './Components/NaveBare';
 
 
 
 function App() {
-
-    const {budgets, getBudgetExpense} = useBudgets()
 
 
   return (
@@ -23,39 +22,25 @@ function App() {
                         {/* device base elements */}
                         <div className='device'>
                               <div className='face'><div className='eyes'></div></div>
-
                               <span className="material-symbols-rounded">wifi</span>
                               <span className="material-symbols-rounded">signal_cellular_alt</span>
                               <span className="material-symbols-rounded">battery_full</span>
                               <span>12:30</span>
                         </div>
+
                         {/* here the main page */}
+                      <article title='here you can view ,overview your budgets' className='w-full h-auto grow rounded-xl drop-shadow-2xl flex flex-col '>
+                            <Routes><Route path='/' element ={ <Home/>}></Route></Routes>
+                            <Routes><Route path='/addBudget' element ={  <AddBudgetModal />}></Route></Routes>
+                            <Routes><Route path='/addExpense' element ={<AddExpenseModal  />}></Route></Routes>
+                            <Routes><Route path='/menu' element ={<Menu/>}></Route></Routes>
+                            <Routes><Route path='/profile' element ={<Profile/>}></Route></Routes>
+                            <Routes><Route path='/summary' element ={<Summary/>}></Route></Routes>
+                           
+                       </article>
 
-                          <div>
-                                <h1>budgets</h1>
-                                <button>Add budget</button>
-                                <button>Add Expense</button>
-                          </div>
-                          <TotalBudgetCard/>
-                           <UncategorizedBudgetCard/>
-                          <div className='budget'>
-                                {budgets.map(budget => {
-                                    const amount = getBudgetExpense(budget.id).reduce((total, expense) => total + expense.amount, 0)
-                                  return(
-                                            <BudgetCard 
-                                            key={budget.id}
-                                            name={budget.name} 
-                                            amount={amount} 
-                                            max={budget.max}
-                                            />
-                                        )
-                              })}
-                          </div>
-
-                      <AddBudgetModal />
-
-                      <AddExpenseModal  />
-
+                       {/* NavBar */}
+                       <NaveBare />
                </div>
             </div>
         </section>

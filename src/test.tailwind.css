@@ -1,0 +1,8 @@
+.big-button {
+    @apply w-auto;
+}
+
+input {
+    @apply flex bg-red-600 lg:bg-red-300;
+
+}
